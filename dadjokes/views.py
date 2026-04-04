@@ -3,6 +3,11 @@
 import random
 from django.shortcuts import render, get_object_or_404
 from .models import Joke, Picture
+from django.http import JsonResponse # for api view, the error was that I forgot to import this module, so I added it here
+
+def api_view(request):
+    data = {"message": "Hello from API"}
+    return JsonResponse(data)
 
 #starting by random def
 def random_view(request):
