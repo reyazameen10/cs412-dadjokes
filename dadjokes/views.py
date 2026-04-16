@@ -8,7 +8,7 @@ from django.http import JsonResponse # for api view, the error was that I forgot
 def api_view(request):
     data = {"message": "Hello from API"}
     return JsonResponse(data)
-
+python manage.py migrate
 #starting by random def
 def random_view(request):
     joke = random.choice(Joke.objects.all())
